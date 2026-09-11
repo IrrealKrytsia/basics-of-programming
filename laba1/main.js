@@ -1,6 +1,5 @@
 'use strict';
 
-
 /////// task 1
 function inc (n) {
     if (typeof n !== 'number') throw new Error('Result should be Number');
@@ -11,11 +10,11 @@ const a = 5;
 const b = inc(a);
 console.dir({a, b});
 
-
-
 //////// task 2
-// Перевірку на те, чи є n числом, не робив, тому що в умовах задачі не вказано якого типу властивість об'єкту n
-function inc1 (num){ // Оскільки в умові задачі не достатньо указано які дані будуть прийматися, буде перевірка на валідність даних оскільки не описано, що саме має виконуватися в такому випадку
+/* Оскільки в умові задачі не достатньо указано які дані будуть прийматися, буде перевірка на валідність
+(що саме має виконуватися в такому випадку) */
+ 
+function inc1 (num){
     if (num == null || typeof num !== 'object' || num.n == undefined && typeof n !== 'number'){
         throw new Error('Invalid object type');
     }
@@ -52,4 +51,4 @@ for (const element of arr) {
     obj2[type]++;
 }
 
-console.log(obj2);
+console.dir(obj2);
