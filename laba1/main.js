@@ -11,8 +11,7 @@ const b = inc(a);
 console.dir({a, b});
 
 //////// task 2
-/* Оскільки в умові задачі не достатньо указано які дані будуть прийматися, буде перевірка на валідність
-(що саме має виконуватися в такому випадку) */
+/* Because of the ambiguity in the task phrasing, I have added an additional check */
  
 function inc1 (num){
     if (num == null || typeof num !== 'object' || num.n == undefined && typeof n !== 'number'){
@@ -33,6 +32,11 @@ const obj1 = { number: 0, string: 0, boolean: 0 };
 
 for (const element of arr) {
     const type = typeof element;
+
+    if (obj1[type] === undefined) {
+        obj1[type] = 0;
+    }
+
     obj1[type]++;
 }
 
