@@ -1,3 +1,5 @@
+'use strict';
+
 const persons = {
   lenin: { born: 1870, died: 1924 },
   mao: { born: 1893, died: 1976 },
