@@ -39,7 +39,7 @@ const doWhileLoop = (...args) => {
 };
 
 const withReduce = (...args) => {
-    return args.reduce((acc, cur) => acc + cur, 0);
+    return args.reduce((acc, cur) => (acc + cur), 0);
 };
 
 const a = forLoop(1, 2, 3);
