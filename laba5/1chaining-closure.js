@@ -2,7 +2,7 @@ const seq = (f) => (g) => {
   if (typeof g === 'number') {
     return f(g);
   }
-  
+
   return seq((x) => f(g(x)));
 };
 
@@ -17,4 +17,4 @@ const thirdSeq = seq(x => x + 1)
   (x => x / 3)
   (x => x - 4)(7);
 
-console.log(firstSeq, secondSeq, thirdSeq);
+console.log(`First composition: \n ${firstSeq} \n`, `Second composition: \n ${secondSeq} \n`, `Third composition: \n ${thirdSeq} \n`);
