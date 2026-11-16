@@ -5,10 +5,19 @@ const removeElement = (array, item) => {
 };
 
 const removeElements = (array, ...items) => {
-  for (const item of items) removeElement(array, item);
+  for (const item of items) {removeElement(array, item)};
 };
 
-const unique = (array) => [...new Set(array)];
+const unique = (array) => {
+    const result = [];
+
+    for (const item of array) {
+        if (!result.includes(item)) {
+            result.push(item);
+       }
+    }
+    return result;
+};
 
 const difference = (array1, array2) => {
   const result = [];
