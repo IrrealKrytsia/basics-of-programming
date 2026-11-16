@@ -4,7 +4,7 @@ const pipe = (...fns) => {
             throw new Error('All pipe arguments should be functions');
         }
     }
-    return x => fns.reduce((acc, curr) => fn(acc), x);
+    return x => fns.reduce((acc, fn) => fn(acc), x);
 }
 
 
