@@ -2,6 +2,16 @@ const compose = (...fns) => {
   const reversed = [...fns].reverse();
   const events = { error: [] };
 
+  const pushError = (err) => {
+    for (const event of events.error) {
+      try {
+        event(err);
+      } catch {
+        
+      }
+    }
+  };
+
   const composed = (x) => {
     try {
       return reversed.reduce((acc, fn) => {
@@ -25,17 +35,6 @@ const compose = (...fns) => {
 
   return composed;
 };
-
-  const pushError = (err) => {
-    for (const event of events.error) {
-      try {
-        event(err);
-      } catch {
-        
-      }
-    }
-  };
-
 
 
 const inc = (x) => ++x;
