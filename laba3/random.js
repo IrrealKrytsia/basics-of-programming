@@ -9,5 +9,6 @@ const random = (min, max) => {
     return min + Math.floor(Math.random() * (max - min + 1));
 };
 
+console.log(random(1,5));
 console.log(random(3, 40));
 console.log(random(2)); 
